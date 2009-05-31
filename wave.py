@@ -21,7 +21,7 @@ def OnBlipSubmitted(properties, context):
 	contents = blip.GetDocument().GetText()
 	if '?guardian' in contents:
 		search = '"%s"' % contents.replace('?guardian', '').replace('"', ' ').replace('\n', '')
-		items = Client('tq5gx9534ne7cedn39ynwztt').search(q = search, count = '10', order_by_date = 'desc')
+		items = Client('API_KEY_GOES_IN_HERE').search(q = search, count = '10', order_by_date = 'desc')
 		content = "\n\nLatest items from The Guardian for " + search + "\n"
 		for item in items:
 			standfirst = ""
